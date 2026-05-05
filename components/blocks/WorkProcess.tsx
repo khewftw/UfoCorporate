@@ -50,27 +50,27 @@ export function WorkProcess() {
               return (
                 <article
                   key={step.title}
-                  className="flex flex-col items-start rounded-[32px] bg-white p-8 shadow-sm border border-gray-100/50 transition-all hover:shadow-md"
+                  className="flex flex-col items-start rounded-[32px] !border !border-gray-100/50 !bg-white p-8 shadow-sm transition-all hover:shadow-md"
                 >
-                  <span className="text-sm font-bold uppercase tracking-widest text-[#111827]">
+                  <span className="text-sm font-bold uppercase tracking-widest !text-[#111827]">
                     Шаг 0{index + 1}
                   </span>
                   
-                  <div className="mt-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7F8FA] text-[#6B7280]">
+                  <div className="mt-5 flex h-12 w-12 items-center justify-center rounded-2xl !bg-[#F7F8FA] !text-[#6B7280]">
                     <Icon className="h-6 w-6" />
                   </div>
                   
-                  <h3 className="mt-6 text-2xl font-bold tracking-tight text-[#111827]">
+                  <h3 className="mt-6 text-2xl font-bold tracking-tight !text-[#111827]">
                     {step.title}
                   </h3>
                   
-                  <p className="mt-4 text-base leading-relaxed text-[#6B7280]">
+                  <p className="mt-4 text-base leading-relaxed !text-[#6B7280]">
                     {step.desc}
                   </p>
 
                   <a 
                     href="#" 
-                    className="mt-8 inline-flex items-center gap-1 text-sm font-bold text-[#111827] transition-colors hover:text-[#FFDD2D]"
+                    className="mt-8 inline-flex items-center gap-1 text-sm font-bold !text-[#111827] transition-colors hover:!text-[#FFDD2D]"
                   >
                     Подробнее
                     <ChevronRight className="h-4 w-4" />
@@ -83,7 +83,7 @@ export function WorkProcess() {
           {/* СОБСТВЕННИК: Занимает 4/12 ширины */}
           {/* Важно: здесь pt-20 чтобы оставить место под выглядывающую голову на десктопе */}
           <div className="relative mt-20 lg:mt-0 lg:col-span-4 flex items-end">
-            <article className="relative w-full rounded-[40px] bg-white p-8 pt-24 shadow-sm border border-gray-100/50">
+            <article className="relative w-full rounded-[40px] !border !border-gray-100/50 !bg-white p-8 pt-24 shadow-sm">
               
               {/* Фото Алексея Черепанова с эффектом "выглядывания" */}
               <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-full max-w-[320px] pointer-events-none lg:-top-24 lg:left-auto lg:right-0 lg:translate-x-0">
@@ -96,18 +96,18 @@ export function WorkProcess() {
 
               {/* Текстовый блок в стиле плашки */}
               <div className="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left">
-                <p className="text-2xl font-bold text-[#111827]">Алексей Черепанов</p>
-                <p className="text-sm font-medium text-[#6B7280]">Основатель бюро «УФО-ЦЕНТР»</p>
+                <p className="text-2xl font-bold !text-[#111827]">Алексей Черепанов</p>
+                <p className="text-sm font-medium !text-[#6B7280]">Основатель бюро «УФО-ЦЕНТР»</p>
                 
-                <div className="mt-8 h-px w-full bg-gray-100" />
+                <div className="mt-8 h-px w-full !bg-gray-100" />
                 
-                <p className="mt-6 text-sm leading-relaxed text-[#6B7280]">
+                <p className="mt-6 text-sm leading-relaxed !text-[#6B7280]">
                   «Лично отвечаю за качество каждого дела. Моя цель — решить вашу проблему так, чтобы вы забыли о ней навсегда».
                 </p>
               </div>
 
               {/* Акцентный элемент — желтый круг сзади (как на референсе) */}
-              <div className="absolute top-10 right-10 h-32 w-32 rounded-full bg-[#FFDD2D] blur-3xl opacity-20 -z-10" />
+              <div className="absolute top-10 right-10 -z-10 h-32 w-32 rounded-full !bg-[#FFDD2D] opacity-20 blur-3xl" />
             </article>
           </div>
 

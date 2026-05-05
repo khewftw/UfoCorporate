@@ -16,7 +16,7 @@ export function LeadCaptureForm() {
           <p className={`${ds.body} mt-4`}>
             Дежурный юрист внимательно выслушает вас, оценит шансы на успех и
             подскажет правильные первые шаги.{" "}
-            <span className="font-semibold text-[#111827]">
+            <span className="font-semibold !text-[#111827]">
               Это абсолютно бесплатно!
             </span>
           </p>

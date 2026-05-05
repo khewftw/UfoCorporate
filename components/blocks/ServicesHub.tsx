@@ -7,9 +7,9 @@ export function ServicesHub() {
       description:
         "Полное законное списание кредитов и долгов по ЖКХ. Защитим от коллекторов и сохраним имущество.",
       gridClass: "lg:col-span-3",
-      bgClass: "bg-[#F0F4F8]",
-      textClass: "text-[#111827]",
-      descClass: "text-[#6B7280]",
+      bgClass: "!bg-[#F0F4F8]",
+      textClass: "!text-[#111827]",
+      descClass: "!text-[#6B7280]",
       image: "/images/services/bankrot2.png",
     },
     {
@@ -17,9 +17,9 @@ export function ServicesHub() {
       description:
         "Расторжение брака, справедливый раздел имущества и определение места жительства детей.",
       gridClass: "lg:col-span-3",
-      bgClass: "bg-[#F3EFFF]",
-      textClass: "text-[#111827]",
-      descClass: "text-[#6B7280]",
+      bgClass: "!bg-[#F3EFFF]",
+      textClass: "!text-[#111827]",
+      descClass: "!text-[#6B7280]",
       image: "/images/services/family.png",
     },
     {
@@ -27,9 +27,9 @@ export function ServicesHub() {
       description:
         "Разрешение имущественных споров, защита прав потребителей и помощь с наследством.",
       gridClass: "lg:col-span-2",
-      bgClass: "bg-[#EEF2F7]",
-      textClass: "text-[#111827]",
-      descClass: "text-[#6B7280]",
+      bgClass: "!bg-[#EEF2F7]",
+      textClass: "!text-[#111827]",
+      descClass: "!text-[#6B7280]",
       image: "/images/services/civil.png",
     },
     {
@@ -37,9 +37,9 @@ export function ServicesHub() {
       description:
         "Споры с ОСАГО/КАСКО, возврат прав, обжалование штрафов и помощь при ДТП.",
       gridClass: "lg:col-span-2",
-      bgClass: "bg-[#E5F5F3]",
-      textClass: "text-[#111827]",
-      descClass: "text-[#6B7280]",
+      bgClass: "!bg-[#E5F5F3]",
+      textClass: "!text-[#111827]",
+      descClass: "!text-[#6B7280]",
       image: "/images/services/auto.png",
     },
     {
@@ -47,9 +47,9 @@ export function ServicesHub() {
       description:
         "Срочная защита обвиняемых. Экономические преступления, обжалование приговоров.",
       gridClass: "lg:col-span-2",
-      bgClass: "bg-[#111827]",
-      textClass: "text-white",
-      descClass: "text-gray-400",
+      bgClass: "!bg-[#111827]",
+      textClass: "!text-white",
+      descClass: "!text-gray-400",
       image: "/images/services/criminal.png",
     },
     {
@@ -57,9 +57,9 @@ export function ServicesHub() {
       description:
         "Споры с Wildberries и Ozon. Обжалование штрафов и взыскание компенсаций за товар.",
       gridClass: "lg:col-span-3",
-      bgClass: "bg-[#FFF8E7]",
-      textClass: "text-[#111827]",
-      descClass: "text-[#6B7280]",
+      bgClass: "!bg-[#FFF8E7]",
+      textClass: "!text-[#111827]",
+      descClass: "!text-[#6B7280]",
       image: "/images/services/marketplaces.png",
     },
     {
@@ -67,9 +67,9 @@ export function ServicesHub() {
       description:
         "Помощь участникам СВО. Выплаты, льготы и оспаривание решений военно-врачебных комиссий.",
       gridClass: "lg:col-span-3",
-      bgClass: "bg-[#F0F4F8]",
-      textClass: "text-[#111827]",
-      descClass: "text-[#6B7280]",
+      bgClass: "!bg-[#F0F4F8]",
+      textClass: "!text-[#111827]",
+      descClass: "!text-[#6B7280]",
       image: "/images/services/military.png",
     },
     {
@@ -77,9 +77,9 @@ export function ServicesHub() {
       description:
         "Корпоративные споры, взыскание дебиторской задолженности и защита бизнеса.",
       gridClass: "lg:col-span-2",
-      bgClass: "bg-[#F3EFFF]",
-      textClass: "text-[#111827]",
-      descClass: "text-[#6B7280]",
+      bgClass: "!bg-[#F3EFFF]",
+      textClass: "!text-[#111827]",
+      descClass: "!text-[#6B7280]",
       image: "/images/services/corporate.png",
     },
     {
@@ -87,9 +87,9 @@ export function ServicesHub() {
       description:
         "Споры с застройщиками, приватизация, выселение и надежная защита прав жильцов.",
       gridClass: "lg:col-span-2",
-      bgClass: "bg-[#EEF2F7]",
-      textClass: "text-[#111827]",
-      descClass: "text-[#6B7280]",
+      bgClass: "!bg-[#EEF2F7]",
+      textClass: "!text-[#111827]",
+      descClass: "!text-[#6B7280]",
       image: "/images/services/housing.png",
     },
     {
@@ -97,9 +97,9 @@ export function ServicesHub() {
       description:
         "Защита от незаконного увольнения и дискриминации. Взыскание невыплаченной зарплаты.",
       gridClass: "lg:col-span-2",
-      bgClass: "bg-[#E5F5F3]",
-      textClass: "text-[#111827]",
-      descClass: "text-[#6B7280]",
+      bgClass: "!bg-[#E5F5F3]",
+      textClass: "!text-[#111827]",
+      descClass: "!text-[#6B7280]",
       image: "/images/services/labor.png",
     },
   ];
@@ -123,11 +123,13 @@ export function ServicesHub() {
             className={`${ds.cardService} ${service.bgClass} ${service.gridClass}`}
           >
             <div className="relative z-10 flex flex-col items-center text-center">
-              <h3 className={`${ds.h3Card} ${service.textClass}`}>
+              <h3
+                className={`text-xl font-bold tracking-tight md:text-2xl md:leading-snug ${service.textClass}`}
+              >
                 {service.title}
               </h3>
               <p
-                className={`${ds.body} mt-3 max-w-sm ${service.descClass}`}
+                className={`mt-3 max-w-sm text-base font-normal leading-relaxed ${service.descClass}`}
               >
                 {service.description}
               </p>

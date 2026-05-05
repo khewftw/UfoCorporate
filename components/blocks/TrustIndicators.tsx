@@ -76,7 +76,7 @@ export function TrustIndicators() {
               <div
                 className={`mt-6 flex min-h-[160px] flex-1 items-center justify-center rounded-2xl md:mt-0 md:w-1/2 ${ds.surfaceSoft}`}
               >
-                <span className="text-2xl font-bold uppercase tracking-widest text-[#111827] opacity-10">
+                <span className="text-2xl font-bold uppercase tracking-widest !text-[#111827] opacity-10">
                   УФО-ЦЕНТР
                 </span>
               </div>
