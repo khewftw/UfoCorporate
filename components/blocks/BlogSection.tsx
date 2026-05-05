@@ -58,7 +58,7 @@ export function BlogSection() {
             key={post.title}
             className={`${ds.cardService} ${post.bgClass} flex flex-col min-h-[460px] md:min-h-[480px] overflow-hidden group transition-all duration-300 hover:shadow-lg`}
           >
-            {/* Контент сверху: убрал надзаголовки и уменьшил верхний padding */}
+            {/* Контент сверху */}
             <div className="relative z-10 flex flex-col items-center text-center p-6 pt-8 pb-0">
               <h3 className={`${ds.h3Card} ${post.textClass} leading-tight`}>
                 {post.title}
@@ -70,7 +70,7 @@ export function BlogSection() {
               </p>
             </div>
 
-            {/* 3D Иллюстрация: чуть приподнял высоту контейнера */}
+            {/* 3D Иллюстрация */}
             <div className="pointer-events-none relative mt-auto h-[220px] w-full">
               <img
                 src={post.image}
@@ -79,11 +79,11 @@ export function BlogSection() {
               />
             </div>
 
-            {/* Кнопка "Подробнее" */}
+            {/* Кнопка "Подробнее" с желтым свечением при наведении */}
             <div className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2">
               <button 
                 type="button" 
-                className={`${ds.btnSecondaryTint} bg-white/60 backdrop-blur-sm hover:bg-white transition-all`}
+                className={`${ds.btnSecondaryTint} bg-white/70 backdrop-blur-sm transition-all duration-300 group-hover:bg-[#FFDD2D] group-hover:text-[#111827] group-hover:shadow-[0_0_25px_rgba(255,221,45,0.6)] hover:scale-105`}
               >
                 Подробнее
               </button>
