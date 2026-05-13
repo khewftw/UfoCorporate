@@ -28,6 +28,22 @@ export function Footer() {
     // Глубокий тёмно-серый цвет в стиле Т-Банка
     <footer className="w-full bg-[#1C1C1E] pb-8 pt-12 mt-16 md:mt-24 font-sans selection:bg-[#FFDD2D] selection:text-black">
       <div className="mx-auto w-full max-w-[1200px] px-4 md:px-8">
+        <div className="mb-8 flex justify-start">
+          <a
+            href="#"
+            className="inline-flex items-center gap-3 rounded-xl transition-opacity hover:opacity-90"
+            aria-label="УФО-ЦЕНТР"
+          >
+            <img
+              src="/white.svg"
+              alt="Логотип УФО-ЦЕНТР"
+              className="h-10 w-auto"
+            />
+            <span className="text-base font-bold tracking-tight text-white md:text-lg">
+              ЮРИДИЧЕСКАЯ КОМПАНИЯ УРАЛЬСКОГО ФЕДЕРАЛЬНОГО ОКРУГА «УФО-ЦЕНТР»
+            </span>
+          </a>
+        </div>
         
         {/* 1. ВЕРХНИЙ БЛОК: Кнопки-теги и Телефоны */}
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">

@@ -1,3 +1,4 @@
+import { AboutSection } from "@/components/blocks/AboutSection";
 import { BlogSection } from "@/components/blocks/BlogSection";
 import { Footer } from "@/components/blocks/Footer";
 import { Header } from "@/components/blocks/Header";
@@ -5,7 +6,7 @@ import { HeroSection } from "@/components/blocks/HeroSection";
 import { LeadCaptureForm } from "@/components/blocks/LeadCaptureForm";
 import { ReviewsSection } from "@/components/blocks/ReviewsSection";
 import { ServicesHub } from "@/components/blocks/ServicesHub";
-import { TrustIndicators } from "@/components/blocks/TrustIndicators";
+import { TeamSection } from "@/components/blocks/TeamSection";
 import { ds } from "@/lib/design-system";
 
 export default function Home() {
@@ -17,8 +18,9 @@ export default function Home() {
         <div
           className={`mx-auto w-full max-w-7xl ${ds.sectionStack} px-4 py-12 md:px-8 md:py-16`}
         >
-          <TrustIndicators />
+          <AboutSection />
           <ServicesHub />
+          <TeamSection />
           <LeadCaptureForm />
           <BlogSection />
           <ReviewsSection />

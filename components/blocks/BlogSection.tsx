@@ -56,7 +56,7 @@ export function BlogSection() {
             key={post.title}
             className={`${ds.cardService} ${post.bgClass} group flex min-h-[460px] flex-col overflow-hidden transition-all duration-300 hover:shadow-lg md:min-h-[480px]`}
           >
-            <div className="relative z-10 flex flex-col items-center p-6 pb-0 pt-8 text-center">
+            <div className="relative z-10 flex flex-col items-center p-6 pb-0 pt-0 text-center">
               <h3
                 className={`text-xl font-bold leading-tight tracking-tight md:text-2xl md:leading-snug ${post.textClass}`}
               >

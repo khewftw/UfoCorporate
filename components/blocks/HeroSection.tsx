@@ -33,7 +33,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div
+      {/* <div
         className={`absolute bottom-0 left-1/2 z-20 -translate-x-1/2 translate-y-1/2 ${ds.floatingPanel}`}
       >
         <div className="flex w-16 cursor-pointer flex-col items-center gap-2 transition-transform hover:-translate-y-1 md:w-auto md:min-w-[100px] md:gap-3">
@@ -70,7 +70,7 @@ export function HeroSection() {
           </div>
           <span className={ds.pillLabelStrong}>Все услуги</span>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
