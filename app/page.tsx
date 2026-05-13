@@ -20,8 +20,8 @@ export default function Home() {
         >
           <AboutSection />
           <ServicesHub />
-          <TeamSection />
           <LeadCaptureForm />
+          <TeamSection />
           <BlogSection />
           <ReviewsSection />
         </div>
