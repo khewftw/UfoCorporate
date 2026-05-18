@@ -41,7 +41,10 @@ const cases: CaseStudy[] = [
 
 export function ReviewsSection() {
   return (
-    <section className={`w-full ${ds.sectionSpacing}`}>
+    <section
+      id="reviews"
+      className={`w-full scroll-mt-24 ${ds.sectionSpacing} rounded-[32px] ${ds.surfaceSoft} px-4 md:px-6`}
+    >
       <div className={ds.sectionHeaderGap}>
         <h2 className={ds.h2Section}>Реальные дела</h2>
         <p className={ds.sectionLead}>

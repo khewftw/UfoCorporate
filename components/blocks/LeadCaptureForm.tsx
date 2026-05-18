@@ -13,7 +13,7 @@ export function LeadCaptureForm() {
         {/* Левая часть: Текст и форма */}
         <div className="relative z-10 order-2 flex w-full flex-col justify-center p-8 pt-0 md:order-1 md:w-[55%] md:p-12 md:pt-12 lg:p-16">
           <h3 className="text-[28px] font-bold leading-tight tracking-tight text-[#111827] md:text-4xl md:leading-tight">
-            Получите правовой анализ вашей ситуации
+            Получите бесплатную юр консультацию
           </h3>
           <p className="mt-4 text-base font-medium leading-relaxed text-[#111827]/80">
             Дежурный юрист внимательно выслушает вас, оценит шансы на успех и

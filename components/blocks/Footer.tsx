@@ -4,7 +4,6 @@ export function Footer() {
   const topLinks = [
     "О компании",
     "Новости",
-    "Полезные материалы",
     "Отзывы",
     "Реквизиты",
     "Контакты",
@@ -26,7 +25,10 @@ export function Footer() {
 
   return (
     // Глубокий тёмно-серый цвет в стиле Т-Банка
-    <footer className="w-full bg-[#1C1C1E] pb-8 pt-12 mt-16 md:mt-24 font-sans selection:bg-[#FFDD2D] selection:text-black">
+    <footer
+      id="contacts"
+      className="relative z-10 w-full scroll-mt-24 bg-[#1C1C1E] pb-8 pt-12 mt-16 md:mt-24 font-sans selection:bg-[#FFDD2D] selection:text-black"
+    >
       <div className="mx-auto w-full max-w-[1200px] px-4 md:px-8">
         <div className="mb-8 flex justify-start">
           <a

@@ -3,7 +3,6 @@ import { ds } from "@/lib/design-system";
 
 type Agency = {
   name: string;
-  /** Путь к SVG/PNG логотипа. Если null — рисуется иконка-плейсхолдер. */
   logo: string | null;
 };
 
@@ -34,77 +33,64 @@ export function AboutSection() {
         </p>
       </div>
 
-      <article className="grid grid-cols-1 gap-y-6 overflow-hidden rounded-[32px] !bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] md:grid-cols-2 md:gap-y-0">
-        <div className="min-h-0 w-full md:flex md:h-full md:flex-col">
-          <div className="relative aspect-[5/4] w-full overflow-hidden !bg-[#F7F8FA] md:aspect-auto md:min-h-[460px] md:flex-1">
-            <img
-              src="/real photos/03.png"
-              alt="Команда УФО-ЦЕНТР"
-              className="absolute inset-0 h-full w-full object-cover object-center"
-            />
-          </div>
+      <article
+        className={`${ds.cardBento} flex flex-col justify-start gap-8 md:gap-10`}
+      >
+        <p className={ds.body}>
+          Мы берём дело на себя — вам остаются только приятные новости. Опыт
+          работы со всеми ключевыми государственными структурами обеспечивает
+          реальный результат, а не обещания.
+        </p>
+
+        <div className="grid grid-cols-3 gap-3 sm:gap-4">
+          {stats.map((s) => (
+            <div
+              key={s.label}
+              className="flex flex-col items-center gap-2 rounded-2xl !border !border-gray-100/80 !bg-white px-3 py-4 text-center shadow-[0_4px_12px_rgb(0,0,0,0.03)] md:items-start md:px-6 md:py-6 md:text-left"
+            >
+              <span className="flex items-baseline gap-1 whitespace-nowrap">
+                <span className="text-3xl font-bold tracking-tight !text-[#FFDD2D] sm:text-4xl md:text-5xl">
+                  {s.value}
+                </span>
+                {s.suffix ? (
+                  <span className="text-sm font-semibold !text-[#111827] md:text-base">
+                    {s.suffix}
+                  </span>
+                ) : null}
+              </span>
+              <span className="text-sm font-medium leading-tight !text-[#6B7280] md:text-base">
+                {s.label}
+              </span>
+            </div>
+          ))}
         </div>
 
-        <div className="flex min-h-0 w-full flex-col justify-start gap-7 px-6 pb-8 pt-0 md:h-full md:justify-center md:gap-8 md:px-10 md:py-10">
-          <p className={`${ds.body}`}>
-            Мы берём дело на себя — вам остаются только приятные новости. Опыт
-            работы со всеми ключевыми государственными структурами обеспечивает
-            реальный результат, а не обещания.
-          </p>
-
-          <div className="grid grid-cols-3 gap-2 sm:gap-3">
-            {stats.map((s) => (
+        <div className="flex flex-col items-center gap-6 md:items-start">
+          <h3 className={`${ds.h3Card} text-center md:text-left`}>
+            Активно взаимодействуем с гос. органами
+          </h3>
+          <div className="grid w-full grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-8">
+            {agencies.map((a) => (
               <div
-                key={s.label}
-                // Центрируем на мобилках, левый край на десктопе. Уменьшили паддинги для мобилок (px-2 py-3)
-                className="flex flex-col items-center text-center gap-1 rounded-2xl !border !border-gray-100/80 !bg-white px-2 py-3 shadow-[0_4px_12px_rgb(0,0,0,0.03)] md:items-start md:text-left md:px-5 md:py-4"
+                key={a.name}
+                title={a.name}
+                className="flex items-center justify-center transition-transform hover:scale-105"
               >
-                {/* whitespace-nowrap - железобетонно запрещает перенос строки внутри блока с цифрой */}
-                <span className="flex items-baseline gap-1 whitespace-nowrap">
-                  <span className="text-xl font-bold tracking-tight !text-[#FFDD2D] sm:text-2xl md:text-3xl">
-                    {s.value}
-                  </span>
-                  {s.suffix ? (
-                    <span className="text-[11px] font-semibold !text-[#111827] sm:text-sm">
-                      {s.suffix}
-                    </span>
-                  ) : null}
-                </span>
-                <span className="text-[10px] font-medium leading-tight !text-[#6B7280] sm:text-xs md:text-sm">
-                  {s.label}
-                </span>
+                {a.logo ? (
+                  <img
+                    src={a.logo}
+                    alt={a.name}
+                    className="h-20 w-auto max-w-full object-contain mix-blend-multiply sm:h-24 md:h-28"
+                  />
+                ) : (
+                  <Landmark
+                    className="h-12 w-12 !text-[#9CA3AF]"
+                    aria-hidden
+                  />
+                )}
               </div>
             ))}
           </div>
-
-          {/* Контейнер центрируется на мобильных и выравнивается по левому краю на десктопе */}
-          <div className="flex flex-col items-center gap-4 mt-2 md:items-start">
-            <p className="text-xs font-semibold uppercase tracking-wide text-center !text-[#9CA3AF] md:text-left">
-              Активно взаимодействуем с гос. органами
-            </p>
-            {/* Блок с логотипами: justify-center для мобилок, justify-start для десктопа */}
-            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:justify-start">
-              {agencies.map((a) => (
-                <div
-                  key={a.name}
-                  title={a.name}
-                  className="flex items-center justify-center transition-transform hover:scale-110"
-                >
-                  {a.logo ? (
-                    <img
-                      src={a.logo}
-                      alt={a.name}
-                      // Гибкий размер: h-16 (телефоны) -> sm:h-20 (планшеты) -> md:h-24 (десктоп)
-                      className="h-16 w-auto object-contain sm:h-20 md:h-24 mix-blend-multiply"
-                    />
-                  ) : (
-                    <Landmark className="h-10 w-10 !text-[#9CA3AF]" aria-hidden />
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-          
         </div>
       </article>
     </section>

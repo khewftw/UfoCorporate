@@ -94,6 +94,14 @@ export const ds = {
   cardService:
     "group relative flex min-h-[420px] flex-col overflow-hidden rounded-[32px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-transform duration-200 hover:-translate-y-1 md:min-h-[480px]",
 
+  /** Компактная карточка практики (сетка 3×4) */
+  cardServiceCompact:
+    "group relative flex min-h-[280px] flex-col overflow-hidden rounded-[32px] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-transform duration-200 hover:-translate-y-1 md:min-h-[320px]",
+
+  /** Акцент в правом нижнем углу тёмной карточки услуги */
+  serviceCardCornerAccent:
+    "pointer-events-none absolute bottom-0 right-0 h-32 w-32 bg-gradient-to-tl from-[#FFDD2D]/25 via-[#FFDD2D]/5 to-transparent md:h-40 md:w-40",
+
   /** Кнопка Primary */
   btnPrimary:
     "inline-flex items-center justify-center rounded-xl !bg-[#FFDD2D] px-8 py-4 text-base font-semibold !text-[#111827] transition-colors hover:!bg-[#f5d22a]",
