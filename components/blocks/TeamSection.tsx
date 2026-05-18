@@ -48,7 +48,8 @@ export function TeamSection() {
         {team.map((m) => (
           <article
             key={m.name}
-            className="group relative flex aspect-square flex-col overflow-hidden rounded-[32px] bg-[#111827] shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
+            // Изменили aspect-square на aspect-[3/4] для правильных пропорций фото и достаточного места под текст
+            className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-[32px] bg-[#111827] shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
           >
             <img
               src={m.photo}
@@ -58,29 +59,36 @@ export function TeamSection() {
 
             <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-[#111827]/40 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100 group-hover:bg-[#111827]/85" />
 
+            {/* Дефолтное состояние (Имя и должность) */}
             <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-3 p-6 text-center transition-all duration-500 group-hover:translate-y-8 group-hover:opacity-0">
               <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-md">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-white">
                   {m.role}
                 </span>
               </span>
-              <h3 className="text-2xl font-bold leading-tight tracking-tight text-white">
+              <h3 className="text-[22px] md:text-2xl font-bold leading-tight tracking-tight text-white">
                 {m.name}
               </h3>
             </div>
 
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 opacity-0 transition-all duration-500 group-hover:opacity-100 md:p-8">
-              <div className="mb-6 h-1 w-12 scale-0 rounded-full bg-[#FFDD2D] transition-transform duration-500 delay-100 group-hover:scale-100" />
-              <p className="mb-8 text-center text-[15px] font-medium leading-relaxed text-white/90 md:text-[17px]">
+            {/* Ховер-состояние (Текст и кнопка) */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-5 opacity-0 transition-all duration-500 group-hover:opacity-100 md:p-6">
+              <div className="mb-4 h-1 w-10 scale-0 rounded-full bg-[#FFDD2D] transition-transform duration-500 delay-100 group-hover:scale-100" />
+              
+              {/* Сделали текст адекватного размера и выставили нормальные отступы */}
+              <p className="mb-6 text-center text-[13px] font-medium leading-relaxed text-white/90 md:text-[14px]">
                 {m.description}
               </p>
+              
+              {/* Кнопка с новым текстом "Консультация" */}
               <button
                 type="button"
-                className="rounded-xl bg-[#FFDD2D] px-6 py-3.5 text-sm font-bold text-[#111827] shadow-[0_8px_20px_rgba(255,221,45,0.3)] transition-transform hover:scale-105 active:scale-95"
+                className="relative z-10 rounded-xl bg-[#FFDD2D] px-6 py-3 text-[14px] font-bold text-[#111827] shadow-[0_8px_20px_rgba(255,221,45,0.3)] transition-transform hover:scale-105 active:scale-95"
               >
-                Записаться на консультацию
+                Консультация
               </button>
-              <span className="mt-3 text-[11px] font-semibold uppercase tracking-widest text-white/50 md:text-xs">
+              
+              <span className="mt-2 text-[10px] font-semibold uppercase tracking-widest text-white/50">
                 Поможем бесплатно
               </span>
             </div>
