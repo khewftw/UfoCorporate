@@ -1,4 +1,6 @@
 import { Phone } from "lucide-react";
+import { ContactActions } from "@/components/blocks/ContactActions";
+import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact-links";
 
 const navItems = [
   { label: "Услуги", href: "#services" },
@@ -31,27 +33,22 @@ export function Header() {
             <a
               key={item.label}
               href={item.href}
-              className="whitespace-nowrap text-sm font-medium !text-[#111827] transition-colors hover:!text-[#6B7280]"
+              className="whitespace-nowrap text-base font-medium !text-[#111827] transition-colors hover:!text-[#6B7280]"
             >
               {item.label}
             </a>
           ))}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-3 sm:gap-5">
+        <div className="flex shrink-0 flex-col items-end gap-2 sm:flex-row sm:items-center sm:gap-3">
           <a
-            href="tel:88003330288"
-            className="hidden items-center gap-2 text-sm font-semibold !text-[#111827] lg:flex"
+            href={PHONE_TEL}
+            className="hidden items-center gap-2 text-base font-semibold !text-[#111827] xl:flex"
           >
             <Phone className="h-4 w-4" />
-            8 800 333-02-88
+            {PHONE_DISPLAY}
           </a>
-          <button
-            type="button"
-            className="rounded-xl !bg-[#FFDD2D] px-4 py-2.5 text-sm font-semibold !text-[#111827] transition-colors hover:!bg-[#f5d22a] sm:px-6"
-          >
-            Заказать звонок
-          </button>
+          <ContactActions compact />
         </div>
       </div>
     </header>

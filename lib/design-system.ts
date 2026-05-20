@@ -23,33 +23,44 @@ export const ds = {
 
   /** Заголовок секции (H2): по центру, один размер во всём продукте */
   h2Section:
-    "text-center text-3xl font-bold tracking-tight !text-[#111827] md:text-4xl md:leading-tight",
+    "text-center text-4xl font-bold tracking-tight !text-[#111827] md:text-[2.75rem] md:leading-tight",
 
   /** Отступ блока «H2 + лид» до следующего контента в секции */
   sectionHeaderGap: "mb-10 md:mb-12",
 
   /** Лид под H2 */
   sectionLead:
-    "mx-auto mt-6 max-w-3xl text-center text-base leading-relaxed !text-[#6B7280] md:text-lg",
+    "mx-auto mt-6 max-w-3xl text-center text-lg leading-relaxed !text-[#6B7280] md:text-xl",
 
   /** Заголовок карточки / внутренний оффер (H3) */
   h3Card:
-    "text-xl font-bold tracking-tight !text-[#111827] md:text-2xl md:leading-snug",
+    "text-2xl font-bold tracking-tight !text-[#111827] md:text-3xl md:leading-snug",
 
   /** Основной текст в карточках и формах */
   body:
-    "text-base font-normal leading-relaxed !text-[#6B7280]",
+    "text-lg font-normal leading-relaxed !text-[#6B7280]",
 
   /** Меньший текст (выдержки, второстепенные абзацы) */
   bodySm:
-    "text-sm font-normal leading-relaxed !text-[#6B7280]",
+    "text-base font-normal leading-relaxed !text-[#6B7280]",
 
   /** Body на тёмном фоне */
   bodyOnDark:
-    "text-base font-normal leading-relaxed !text-gray-400",
+    "text-lg font-normal leading-relaxed !text-gray-400",
 
   /** Вторичные подписи, теги */
-  meta: "text-sm font-medium !text-[#9CA3AF]",
+  meta: "text-base font-medium !text-[#9CA3AF]",
+
+  /** Заголовок карточки госоргана */
+  agencyCardTitle:
+    "text-base font-bold leading-tight !text-[#111827] md:text-lg",
+
+  /** Описание в карточке госоргана */
+  agencyCardBody:
+    "text-sm font-medium leading-relaxed !text-[#6B7280] md:text-base",
+
+  /** Фон приложения (серо-голубой) */
+  appSurface: "bg-background",
 
   /** Строка «время чтения» */
   readingMeta:
@@ -104,11 +115,15 @@ export const ds = {
 
   /** Кнопка Primary */
   btnPrimary:
-    "inline-flex items-center justify-center rounded-xl !bg-[#FFDD2D] px-8 py-4 text-base font-semibold !text-[#111827] transition-colors hover:!bg-[#f5d22a]",
+    "inline-flex items-center justify-center rounded-xl !bg-[#FFDD2D] px-8 py-4 text-base font-semibold !text-[#111827] transition-colors hover:!bg-[#f5d22a] md:text-lg",
 
   /** Кнопка Secondary (на тинтах / белом) */
   btnSecondary:
-    "inline-flex items-center justify-center gap-2 rounded-xl !bg-white px-6 py-3 text-sm font-semibold !text-[#111827] shadow-[0_4px_12px_rgb(0,0,0,0.05)] transition-colors hover:!bg-gray-50",
+    "inline-flex items-center justify-center gap-2 rounded-xl !bg-white px-6 py-3 text-base font-semibold !text-[#111827] shadow-[0_4px_12px_rgb(0,0,0,0.05)] transition-colors hover:!bg-gray-50",
+
+  /** Компактная secondary для шапки */
+  btnSecondaryCompact:
+    "inline-flex items-center justify-center gap-2 rounded-xl !border !border-gray-200 !bg-white px-4 py-2.5 text-sm font-semibold !text-[#111827] shadow-[0_4px_12px_rgb(0,0,0,0.05)] transition-colors hover:!border-[#FFDD2D] hover:!bg-[#FFDD2D]/10 sm:px-5 sm:text-base",
 
   /** Secondary на карточках услуг: hover на акцент-жёлтый */
   btnSecondaryTint:

@@ -20,7 +20,7 @@ export function HeroSection() {
         </p>
         <div className="mt-8">
           <button type="button" className={ds.btnPrimary}>
-            Оценить перспективы дела
+            Получить бесплатную юридическую консультацию
           </button>
         </div>
       </div>
