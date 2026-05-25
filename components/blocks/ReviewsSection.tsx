@@ -43,83 +43,86 @@ export function ReviewsSection() {
   return (
     <section
       id="reviews"
-      className={`w-full scroll-mt-24 ${ds.sectionSpacing} rounded-[32px] ${ds.surfaceSoft} px-4 md:px-6`}
+      className={`relative left-1/2 w-[100vw] -translate-x-1/2 scroll-mt-24 ${ds.surfaceSoft}`}
     >
-      <div className={ds.sectionHeaderGap}>
-        <h2 className={ds.h2Section}>Реальные дела</h2>
-        <p className={ds.sectionLead}>
-          Ежедневно мы помогаем решить вопросы с долгами — десяткам людей, вот
-          несколько историй наших клиентов
-        </p>
-      </div>
+      {/* ИСПРАВЛЕНИЕ ЗДЕСЬ: Заменили py-16 md:py-24 на pt-16 md:pt-24 pb-6 md:pb-10 */}
+      <div className="mx-auto w-full max-w-[1400px] px-4 md:px-8 pt-16 md:pt-24 pb-6 md:pb-10">
+        <div className={ds.sectionHeaderGap}>
+          <h2 className={ds.h2Section}>Реальные дела</h2>
+          <p className={ds.sectionLead}>
+            Ежедневно мы помогаем решить вопросы с долгами — десяткам людей, вот
+            несколько историй наших клиентов
+          </p>
+        </div>
 
-      <div className={`grid grid-cols-1 md:grid-cols-2 ${ds.gridGap}`}>
-        {cases.map((item) => (
-          <article
-            key={item.clientName}
-            className={`flex flex-col rounded-[32px] !border !border-gray-100/50 !bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:!shadow-md md:p-8`}
-          >
-            <header className="mb-6 flex flex-wrap items-start justify-between gap-4">
-              <div>
-                <h3 className="text-xl font-bold !text-[#111827]">
-                  {item.clientName}
-                </h3>
-                <p className="mt-1 text-sm font-medium !text-[#6B7280]">
-                  {item.meta}
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${ds.gridGap}`}>
+          {cases.map((item) => (
+            <article
+              key={item.clientName}
+              className={`flex flex-col rounded-[32px] !border !border-gray-100/50 !bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:!shadow-md md:p-8`}
+            >
+              <header className="mb-6 flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-xl font-bold !text-[#111827]">
+                    {item.clientName}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium !text-[#6B7280]">
+                    {item.meta}
+                  </p>
+                </div>
+                <a
+                  href="#"
+                  className="group flex shrink-0 items-center gap-2 rounded-xl !bg-[#F7F8FA] px-3 py-2 transition-colors hover:!bg-[#FFDD2D]/20"
+                >
+                  <FileText className="h-4 w-4 !text-[#111827]" aria-hidden />
+                  <span className="text-xs font-bold uppercase tracking-wider !text-[#111827]">
+                    Решение суда
+                  </span>
+                </a>
+              </header>
+
+              <div className="mb-8 space-y-3">
+                <p className="text-sm font-medium !text-[#6B7280]">
+                  Долг при обращении:{" "}
+                  <span className="text-lg font-bold !text-[#FFDD2D]">
+                    {item.debtAtStart}
+                  </span>
                 </p>
+                <div className="inline-flex items-center gap-2 rounded-xl !bg-[#F7F8FA] px-3 py-2 text-sm font-medium !text-[#6B7280]">
+                  После списания:{" "}
+                  <span className="font-bold !text-[#111827]">0 руб.</span>
+                </div>
               </div>
-              <a
-                href="#"
-                className="group flex shrink-0 items-center gap-2 rounded-xl !bg-[#F7F8FA] px-3 py-2 transition-colors hover:!bg-[#FFDD2D]/20"
-              >
-                <FileText className="h-4 w-4 !text-[#111827]" aria-hidden />
-                <span className="text-xs font-bold uppercase tracking-wider !text-[#111827]">
-                  Решение суда
-                </span>
-              </a>
-            </header>
 
-            <div className="mb-8 space-y-3">
-              <p className="text-sm font-medium !text-[#6B7280]">
-                Долг при обращении:{" "}
-                <span className="text-lg font-bold !text-[#FFDD2D]">
-                  {item.debtAtStart}
-                </span>
-              </p>
-              <div className="inline-flex items-center gap-2 rounded-xl !bg-[#F7F8FA] px-3 py-2 text-sm font-medium !text-[#6B7280]">
-                После списания:{" "}
-                <span className="font-bold !text-[#111827]">0 руб.</span>
+              <div className="mb-8 flex-1">
+                <p className="mb-2 text-sm font-bold !text-[#111827]">Отзыв:</p>
+                <p className={`${ds.body} !text-[#6B7280]`}>{item.testimonial}</p>
               </div>
-            </div>
 
-            <div className="mb-8 flex-1">
-              <p className="mb-2 text-sm font-bold !text-[#111827]">Отзыв:</p>
-              <p className={`${ds.body} !text-[#6B7280]`}>{item.testimonial}</p>
-            </div>
+              <footer className="mt-auto flex flex-wrap items-center justify-between gap-4 !border-t !border-gray-100 pt-6">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex shrink-0 items-center transition-opacity hover:opacity-80"
+                >
+                  <img
+                    src="/images/yandex-mapx.svg"
+                    alt="Яндекс Карты"
+                    className="h-8 w-auto object-contain"
+                  />
+                </a>
 
-            <footer className="mt-auto flex flex-wrap items-center justify-between gap-4 !border-t !border-gray-100 pt-6">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex shrink-0 items-center transition-opacity hover:opacity-80"
-              >
-                <img
-                  src="/images/yandex-mapx.svg"
-                  alt="Яндекс Карты"
-                  className="h-8 w-auto object-contain"
-                />
-              </a>
-
-              <button
-                type="button"
-                className={`${ds.btnSecondary} !shadow-none hover:!scale-95 active:!scale-95`}
-              >
-                Перейти к отзыву
-              </button>
-            </footer>
-          </article>
-        ))}
+                <button
+                  type="button"
+                  className={`${ds.btnSecondary} !shadow-none hover:!scale-95 active:!scale-95`}
+                >
+                  Перейти к отзыву
+                </button>
+              </footer>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
