@@ -207,3 +207,59 @@ export const ds = {
   /** Подложка внутри карточки */
   surfaceSoft: "!bg-[#F7F8FA]",
 } as const;
+
+/** Тёмный лендинг услуги (военное право и аналоги) */
+export const dsMil = {
+  pageBg: "bg-[#111827]",
+  sectionAlt: "bg-[#1C1C1E]",
+  sectionStack: "flex flex-col gap-16 md:gap-24",
+  container: "mx-auto w-full max-w-7xl px-4 md:px-8",
+  sectionSpacing: "py-16 md:py-24",
+  sectionHeaderGap: "mb-10 md:mb-12",
+  eyebrow:
+    "text-sm font-bold uppercase tracking-widest text-[#FFDD2D] md:text-base",
+  h1Mil:
+    "text-4xl font-bold leading-[1.12] tracking-tight text-white md:text-5xl lg:text-[3.25rem]",
+  h2Mil:
+    "text-center text-3xl font-bold tracking-tight text-white md:text-4xl md:leading-tight",
+  h3Mil: "text-xl font-bold tracking-tight text-white md:text-2xl",
+  bodyMil: "text-lg font-normal leading-relaxed text-gray-400",
+  bodyMilSm: "text-base font-normal leading-relaxed text-gray-400",
+  cardGlass:
+    "rounded-[32px] border border-white/10 bg-white/5 p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-transform duration-200 hover:-translate-y-1 hover:bg-white/10 md:p-8",
+  cardGlassAccent:
+    "rounded-[32px] border border-[#FFDD2D]/30 bg-[#FFDD2D]/10 p-6 md:p-8",
+  accentAmount: "font-bold text-[#FFDD2D]",
+  btnGhostMil:
+    "inline-flex items-center justify-center rounded-xl border border-white/20 bg-transparent px-8 py-4 text-base font-semibold text-white transition-colors hover:border-[#FFDD2D] hover:bg-[#FFDD2D]/10 md:text-lg",
+  input:
+    "w-full rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-base text-white placeholder:text-gray-500 outline-none transition-all focus:border-[#FFDD2D]/50 focus:bg-white/10",
+  legalFinePrint: "text-center text-sm text-gray-500 md:text-left",
+  quickCheckBanner:
+    "rounded-[24px] border border-[#FFDD2D]/30 bg-white/5 px-6 py-8 md:rounded-[32px] md:px-10 md:py-10",
+  leadBanner:
+    "relative overflow-hidden rounded-[32px] border border-[#FFDD2D]/40 bg-[#FFDD2D]/10 p-8 shadow-[0_0_60px_rgba(255,221,45,0.15)] md:p-12",
+  caseCard:
+    "flex flex-col rounded-[32px] border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFDD2D]/30 hover:bg-white/[0.08] md:p-8",
+} as const;
+
+/** Светлый лендинг «Военное право (СВО)» */
+export const dsMilLight = {
+  container: "mx-auto w-full max-w-[1400px] px-4 md:px-8",
+  sectionBleed: "relative left-1/2 w-[100vw] -translate-x-1/2",
+  sectionSpacing: "py-16 md:py-24",
+  eyebrow:
+    "text-sm font-semibold uppercase tracking-wide !text-[#6B7280] md:text-base",
+  h1Hero:
+    "text-4xl font-bold leading-[1.12] tracking-tight !text-[#111827] md:text-5xl lg:text-[3.25rem]",
+  card:
+    "rounded-[32px] border border-gray-100 bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-200 hover:-translate-y-1 hover:shadow-lg md:p-8",
+  cardDarkAccent:
+    "rounded-[32px] bg-[#111827] p-6 text-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] md:p-8",
+  cardYellowAccent:
+    "rounded-[32px] border border-[#FFDD2D]/40 bg-[#FFDD2D]/15 p-6 md:p-8",
+  checkWell:
+    "flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#FFDD2D] text-[#111827]",
+  stepNumber:
+    "flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFDD2D] text-xl font-bold text-[#111827]",
+} as const;

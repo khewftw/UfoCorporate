@@ -1,9 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { ServiceDetailModal } from "@/components/blocks/ServiceDetailModal";
 import { ds } from "@/lib/design-system";
 import { services } from "@/lib/services-data";
+
+const cardButtonClass =
+  "rounded-2xl border border-white/30 bg-black/20 px-5 py-2.5 text-sm font-bold text-white transition-all duration-300 group-hover:border-[#FFDD2D]/50 group-hover:bg-[#FFDD2D]/20 group-hover:backdrop-blur-md hover:!border-[#FFDD2D] hover:!bg-[#FFDD2D] hover:!text-[#111827] hover:!shadow-[0_0_24px_rgba(255,221,45,0.6)] hover:scale-105 md:px-6 md:text-base";
 
 export function ServicesHub() {
   const [selectedServiceId, setSelectedServiceId] = useState<string | null>(null);
@@ -42,14 +46,29 @@ export function ServicesHub() {
               </p>
             </div>
 
-            <div className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2">
-              <button
-                type="button"
-                onClick={() => setSelectedServiceId(service.id)}
-                className="rounded-2xl border border-white/30 bg-black/20 px-6 py-2.5 text-base font-bold text-white transition-all duration-300 group-hover:border-[#FFDD2D]/50 group-hover:bg-[#FFDD2D]/20 group-hover:backdrop-blur-md hover:!border-[#FFDD2D] hover:!bg-[#FFDD2D] hover:!text-[#111827] hover:!shadow-[0_0_24px_rgba(255,221,45,0.6)] hover:scale-105"
-              >
-                Подробнее
-              </button>
+            <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2">
+              {service.landingHref ? (
+                <>
+                  <Link href={service.landingHref} className={cardButtonClass}>
+                    Подробнее
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedServiceId(service.id)}
+                    className="text-xs font-semibold text-white/70 underline-offset-2 transition-colors hover:text-[#FFDD2D] hover:underline md:text-sm"
+                  >
+                    Краткий обзор
+                  </button>
+                </>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setSelectedServiceId(service.id)}
+                  className={cardButtonClass}
+                >
+                  Подробнее
+                </button>
+              )}
             </div>
           </article>
         ))}

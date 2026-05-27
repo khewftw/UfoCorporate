@@ -5,6 +5,8 @@ export type Service = {
   fullDescription: string;
   audience: string;
   image: string;
+  /** Полноценный лендинг услуги */
+  landingHref?: string;
 };
 
 export const services: Service[] = [
@@ -84,6 +86,7 @@ export const services: Service[] = [
     audience:
       "Военнослужащим, мобилизованным, контрактникам и родственникам при вопросах льгот, выплат и медицинских заключений.",
     image: "/images/services/military 1.png",
+    landingHref: "/services/military",
   },
   {
     id: "corporate",
